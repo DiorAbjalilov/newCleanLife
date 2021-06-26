@@ -1,0 +1,38 @@
+$white: var(--white);
+$gilroy-light: var(--gilroy-light);
+$gilroy-regular: var(--gilroy-regular);
+$gilroy-medium: var(--gilroy-medium);
+$gilroy-bold: var(--gilroy-bold);
+$gilroy-heavy: var(--gilroy-heavy);
+$transition-all: var(--transition-all);
+@mixin transition {
+  transition: $transition-all;
+}
+/* about header */
+header {
+  height: unset;
+  .navbar {
+    position: relative;
+    background: $white;
+    z-index: 15;
+  }
+  .heder-right {
+    .menu {
+      &__link {
+        color: black;
+      }
+    }
+    .call-number {
+      p {
+        color: black;
+      }
+    }
+    .lang__card {
+      .lang-link-active {
+        color: black;
+        border-color: black;
+      }
+    }
+  }
+}
+/* / about header */

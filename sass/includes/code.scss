@@ -1,0 +1,131 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: $gilroy-bold;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 64px;
+  text-align: center;
+  color: #00187b;
+  display: flex;
+  flex-direction: column;
+  .mark-1 {
+    margin-bottom: 15px;
+    display: block;
+    font-family: $gilroy-bold;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+  }
+}
+
+.card {
+  margin-top: 48px;
+  width: 364px;
+  background: $white;
+  filter: drop-shadow(0px 0px 19px rgba(0, 176, 39, 0.1));
+  &__img {
+    width: 100%;
+    height: 257px;
+    border-radius: 5px 5px 0px 0px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__body {
+    padding: 19px 24px;
+  }
+  &__title {
+    font-family: $gilroy-bold;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #00187b;
+  }
+  &__text {
+    margin-top: 14px;
+    font-family: $gilroy-medium;
+    font-size: 15px;
+    line-height: 26px;
+    color: #696969;
+  }
+  &__list {
+    display: none;
+    margin-top: 14px;
+    margin-bottom: -10px;
+    padding-left: 24px;
+    &.active {
+      display: block;
+    }
+    li {
+      font-family: $gilroy-medium;
+      font-size: 16px;
+      line-height: 39px;
+      color: #696969;
+      list-style: disc;
+    }
+  }
+  &__btn {
+    margin-top: 29px;
+    margin-bottom: 12px;
+    font-family: $gilroy-medium;
+    font-size: 16px;
+    line-height: 26px;
+    color: #00187b;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    span {
+      margin-left: 19px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background: transparent;
+    }
+    &:hover,
+    &.active {
+      span {
+        background: #00b027;
+        svg {
+          path {
+            stroke: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 40px;
+  right: 125px;
+  width: 56px;
+  height: 56px;
+  background: #00b027;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  outline: none;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background: #2b388f;
+  }
+}

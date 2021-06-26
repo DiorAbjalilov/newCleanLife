@@ -1,0 +1,23 @@
+/* about header */
+header {
+  height: unset;
+}
+header .navbar {
+  position: relative;
+  background: var(--white);
+  z-index: 15;
+}
+header .heder-right .menu__link {
+  color: black;
+}
+header .heder-right .call-number p {
+  color: black;
+}
+header .heder-right .lang__card .lang-link-active {
+  color: black;
+  border-color: black;
+}
+
+/* / about header */
+
+/*# sourceMappingURL=header.css.map */
