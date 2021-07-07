@@ -11,9 +11,12 @@ $transition-all: var(--transition-all);
 
 /* about-our */
 main .about-our {
+  > .container {
+    padding: 0;
+  }
   &-card {
-    width: 365px;
-    height: 398px;
+    max-width: 365px;
+    width: 100%;
     margin-top: 78px;
     padding: 0 29px;
     border: 1px solid #eeeff2;
@@ -66,6 +69,7 @@ main .about-our {
       }
       p {
         margin-top: 23px;
+        margin-bottom: 29px;
         font-family: $gilroy-medium;
         font-size: 15px;
         line-height: 31px;
@@ -100,6 +104,9 @@ main .about-our {
 /* / about-our */
 /* about-info */
 .about-info {
+  > .container {
+    padding: 0;
+  }
   .title {
     max-width: 831px;
     margin-top: 84px;
@@ -117,6 +124,7 @@ main .about-our {
   }
   &__text {
     display: flex;
+    align-items: center;
     margin-top: 25px;
     img {
       width: 31px;
@@ -134,7 +142,7 @@ main .about-our {
 }
 /* / about-info */
 /* sec-client */
-.sec-client {
+main .sec-client {
   margin-top: 99px;
   padding-bottom: 139px;
   background: #eff2f7;
@@ -149,11 +157,19 @@ main .about-our {
   }
 }
 /* / sec-client */
-
+main .sec-client {
+  > .container {
+    padding: 0;
+  }
+  padding-bottom: 69px;
+  .tns-outer .tns-nav {
+    bottom: 17px;
+  }
+}
 /* main*/
 /* footer*/
 footer {
-  margin-top: 0px;
+  margin-top: 0;
 }
 /* / footer*/
 
@@ -183,13 +199,18 @@ footer {
     }
   }
 }
-@media (max-width: 500px) and (min-width: 320px) {
+@media (max-width: 500px) and (min-width: 300px) {
   .about-our {
     .justify-between {
-      padding: 0 20px;
+      padding: 0 15px;
       justify-content: center;
       .about-our-card {
         margin-top: 50px;
+      }
+    }
+    &-card__body {
+      p {
+        line-height: 25px !important;
       }
     }
   }

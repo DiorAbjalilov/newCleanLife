@@ -10,6 +10,10 @@ html {
   box-sizing: border-box;
 }
 
+main{
+  overflow: hidden;
+}
+
 .title {
   font-family: $gilroy-bold;
   font-weight: bold;
@@ -31,21 +35,30 @@ html {
 }
 
 .card {
-  margin-top: 48px;
-  width: 364px;
+  max-width: 364px;
+  width: 100%;
+  margin: 0 auto;
   background: $white;
   filter: drop-shadow(0px 0px 19px rgba(0, 176, 39, 0.1));
+  cursor: pointer;
   &__img {
     width: 100%;
     height: 257px;
     border-radius: 5px 5px 0px 0px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    object-fit: cover;
   }
   &__body {
     padding: 19px 24px;
+    &.active {
+      .card__link {
+        span {
+          .ic {
+            background: $white;
+          }
+          background: #00b027;
+        }
+      }
+    }
   }
   &__title {
     font-family: $gilroy-bold;
@@ -77,37 +90,29 @@ html {
       list-style: disc;
     }
   }
-  &__btn {
+  &__link {
     margin-top: 29px;
-    margin-bottom: 12px;
-    font-family: $gilroy-medium;
-    font-size: 16px;
-    line-height: 26px;
-    color: #00187b;
-    border: none;
+    margin-bottom: 7px;
     background: transparent;
     display: flex;
     align-items: center;
     cursor: pointer;
-    outline: none;
+    a {
+      font-family: $gilroy-medium;
+      font-size: 16px;
+      line-height: 26px;
+      color: #00187b;
+    }
     span {
-      margin-left: 19px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
       width: 32px;
       height: 32px;
-      background: transparent;
-    }
-    &:hover,
-    &.active {
-      span {
-        background: #00b027;
-        svg {
-          path {
-            stroke: white;
-          }
-        }
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 12px;
+      .ic {
+        background: #00187b;
       }
     }
   }
@@ -122,10 +127,61 @@ html {
   background: #00b027;
   border: none;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
   z-index: 999;
   outline: none;
   transition: all 200ms ease-in-out;
   &:hover {
     background: #2b388f;
   }
+  &.btn-up-change {
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    bottom: 20px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.ic {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  -webkit-mask: {
+    repeat: no-repeat;
+    size: 100%;
+    position: center center;
+  }
+}
+.ic_bars {
+  -webkit-mask-image: url("../../images/icons/bars_icon.svg");
+}
+.ic_times {
+  -webkit-mask-image: url("../../images/icons/times.svg");
+}
+.ic_telegram {
+  -webkit-mask-image: url("../../images/icons/telegram.svg");
+}
+.ic_whatsapp {
+  -webkit-mask-image: url("../../images/icons/whatsapp.svg");
+}
+.ic_facebook {
+  -webkit-mask-image: url("../../images/icons/facebook.svg");
+}
+.ic_youtube {
+  -webkit-mask-image: url("../../images/icons/youtube.svg");
+}
+.ic_instagram {
+  -webkit-mask-image: url("../../images/icons/instagram.svg");
+}
+.ic_plus {
+  -webkit-mask-image: url("../../images/icons/plus.svg");
+}
+.arrow-up {
+  -webkit-mask-image: url("../../images/icons/arrow-up.svg");
 }

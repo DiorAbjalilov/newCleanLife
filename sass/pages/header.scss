@@ -5,9 +5,12 @@ $gilroy-medium: var(--gilroy-medium);
 $gilroy-bold: var(--gilroy-bold);
 $gilroy-heavy: var(--gilroy-heavy);
 $transition-all: var(--transition-all);
+$black: var(--black);
+
 @mixin transition {
   transition: $transition-all;
 }
+
 /* about header */
 header {
   height: unset;
@@ -18,19 +21,65 @@ header {
   }
   .heder-right {
     .menu {
+      &__item {
+        &:nth-of-type(3) {
+          span {
+            path {
+              stroke: $white;
+            }
+          }
+        }
+        .menu-block {
+          span {
+            svg {
+              path {
+                stroke: $black;
+              }
+            }
+          }
+        }
+      }
       &__link {
-        color: black;
+        color: $black;
       }
     }
     .call-number {
-      p {
-        color: black;
+      a {
+        color: $black;
       }
     }
     .lang__card {
-      .lang-link-active {
-        color: black;
-        border-color: black;
+      .lang-basic {
+        color: $black;
+        border-color: $black;
+        svg {
+          path {
+            stroke: $black;
+          }
+        }
+      }
+    }
+  }
+  .navbar-fixed {
+    .heder-right .call-number a {
+      color: $white;
+    }
+    .heder-right .lang__card .lang-basic {
+      color: $white;
+      border-color: $white;
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
+    .heder-right .menu__item:nth-of-type(3) .menu-block {
+      span {
+        svg {
+          path {
+            stroke: $white;
+          }
+        }
       }
     }
   }

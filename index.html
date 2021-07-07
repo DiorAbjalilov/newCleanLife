@@ -5,9 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/base.css ">
@@ -29,32 +26,37 @@
     <div class="navbar">
       <div class="container">
         <nav class="row justify-between align-center">
-          <a href="/" class="col-auto brand-logo">
+          <a href="./index.html" class="col-auto brand-logo">
             <img src="./images/icons/cleanlife.svg" alt="brand-logo">
           </a>
           <div class="col-auto heder-right">
             <ul class="menu">
-              <li class="menu__item active"><a href="/" class="menu__link">Главная</a></li>
-              <li class="menu__item"><a href="./ru/about.html" class="menu__link">О Нас</a></li>
-              <li class="menu__item"><a href="./ru/services.html" class="menu__link">Услуги
-                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
+              <li class="menu__item active"><a href="./index.html" class="menu__link">Главная</a></li>
+              <li class="menu__item"><a href="./ru/about.html" class="menu__link">О нас</a></li>
+              <li class="menu__item">
+                <div class="menu-block">
+                  <a href="./ru/services.html" class="menu__link">Услуги</a>
+                  <span class="menu-change__link">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
                 <ul class="menu-init">
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Уборка <svg width="6" height="11"
-                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Уборка <svg
+                        width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Чистка Брусчатки И
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Чистка
+                      Брусчатки И
                       Фасадов <svg width="6" height="11" viewBox="0 0 6 11" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Химчистка <svg width="6" height="11"
-                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Химчистка <svg
+                        width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
@@ -63,22 +65,20 @@
               <li class="menu__item"><a href="./ru/contacts.html" class="menu__link">Контакты </a></li>
             </ul>
             <div class="call-number">
-              <p> <span>+998 (99) </span> 333-33-33</p>
-              <p> <span>+998 (99) </span> 333-33-33</p>
+              <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
+              <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
             </div>
             <div class="lang__card">
-              <a href="/" class="lang-link-active">Uz
+              <span class="lang-basic" id="first-lang-basic">Ру
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-
-              </a>
-              <div class="lang__content">
-                <a href="/" class="lang__link">Ру</a>
-                <a href="/" class="lang__link">Eng</a>
+              </span>
+              <div class="lang__content" id="first-lang__content">
+                <a href="./uz/index.html" class="lang__link">Uz</a>
               </div>
             </div>
-            <a href="#!" class="order">Заказать услуга</a>
+            <a href="#!" class="order" id='first-order'>Заказать услуга</a>
           </div>
         </nav>
       </div>
@@ -88,31 +88,36 @@
       <div class="navbar-fixed">
         <nav class="row justify-between align-center">
           <a href="/" class="col-auto brand-logo">
-            <img src="./images/icons/brand_logo.svg" alt="brand-logo">
+            <img src="./images/icons/cleanlife.svg" alt="brand-logo">
           </a>
           <div class="col-auto heder-right">
             <ul class="menu">
               <li class="menu__item active"><a href="/" class="menu__link">Главная</a></li>
               <li class="menu__item"><a href="./ru/about.html" class="menu__link">О Нас</a></li>
-              <li class="menu__item"><a href="./ru/services.html" class="menu__link">Услуги
-                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M1 1L5.5 5L10 1" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
+              <li class="menu__item">
+                <div class="menu-block">
+                  <a href="./ru/services.html" class="menu__link">Услуги</a>
+                  <span class="menu-change__link">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
                 <ul class="menu-init">
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Уборка <svg width="6" height="11"
-                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Уборка <svg
+                        width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Чистка Брусчатки И
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Чистка
+                      Брусчатки И
                       Фасадов <svg width="6" height="11" viewBox="0 0 6 11" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Химчистка <svg width="6" height="11"
-                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Химчистка <svg
+                        width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
@@ -121,20 +126,21 @@
               <li class="menu__item"><a href="./ru/contacts.html" class="menu__link">Контакты </a></li>
             </ul>
             <div class="call-number">
-              <p> <span>+998 (99) </span> 333-33-33</p>
+              <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
+              <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
             </div>
             <div class="lang__card">
-              <a href="/" class="lang-link-active">Uz
+              <span class="lang-basic" id="second-lang-basic">Ру
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L7 7L13 1" stroke="#787878" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
+              </span>
+              <div class="lang__content" id="second-lang__content">
 
-              </a>
-              <div class="lang__content">
-                <a href="/" class="lang__link">Ру</a>
-                <a href="/" class="lang__link">Eng</a>
+                <a href="/" class="lang__link">Uz</a>
               </div>
             </div>
+            <a href="#!" class="order" id='second-order'>Заказать услуга</a>
           </div>
         </nav>
       </div>
@@ -142,80 +148,105 @@
     <nav class="navbar-mobil">
       <div class="container">
         <div class="navbar-mobil__menu">
-          <span class="brand-logo">
-            <img src="./images/icons/brand_logo.svg" alt="brand-logo">
-          </span>
-          <button class="btn-toggol"><i class="fas fa-bars" aria-hidden="true"></i></button>
+          <a href="/" class="brand-logo">
+            <img src="./images/icons/cleanlife.svg" alt="brand-logo">
+          </a>
+          <button class="btn-toggol"><i class="ic ic_bars"></i></button>
         </div>
         <div class="row navbar-mobil__navbar">
           <div class="heder-right">
             <ul class="menu">
               <li class="menu__item active"><a href="/" class="menu__link">Главная</a></li>
               <li class="menu__item"><a href="./ru/about.html" class="menu__link">О Нас</a></li>
-              <li class="menu__item"><a href="./ru/services.html" class="menu__link">Услуги
-                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
+              <li class="menu__item">
+                <div class="menu-block">
+                  <a href="./ru/services.html" class="menu__link">Услуги</a>
+                  <span class="menu-change__link">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
                 <ul class="menu-init">
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Уборка <svg width="6" height="11"
-                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Уборка <svg
+                        width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Чистка Брусчатки И
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Чистка
+                      Брусчатки И
                       Фасадов <svg width="6" height="11" viewBox="0 0 6 11" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
                     </a></li>
-                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Химчистка <svg width="6" height="11"
-                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <li class="menu-init__item"><a href="./ru/servies_details.html" class="menu-init__link">Химчистка <svg
+                        width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
-                    </a></li>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="menu__item"><a href="./ru/contacts.html" class="menu__link">Контакты </a></li>
             </ul>
             <div class="call-number">
-              <p> <span>+998 (99) </span> 333-33-33</p>
-              <p> <span>+998 (99) </span> 333-33-33</p>
+              <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
+              <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
             </div>
             <div class="lang__card">
-              <a href="/" class="lang-link-active">Uz
+              <span class="lang-basic" id="third-lang-basic">Ру
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
+              </span>
 
-              </a>
-              <div class="lang__content">
-                <a href="/" class="lang__link">Ру</a>
-                <a href="/" class="lang__link">Eng</a>
+              <div class="lang__content" id="third-lang__content">
+
+                <a href="/" class="lang__link">Uz</a>
               </div>
             </div>
-            <a href="#!" class="order">Заказать услуга</a>
+            <a href="#!" class="order" id="third-order">Заказать услуга</a>
           </div>
         </div>
       </div>
     </nav>
     <div class="category">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <h1 class="category-title">Уборка квартиры, Частных домов, Коттеджей, Офисов </h1>
-            <p class="category-text">Мы занимаемся организацией квартирных, офисных переездов, переездов магазинов,
-              салонов, перевозкой грузов и тд.</p>
-            <div class="connection">
-              <a href="/" class="connection__link">Подробнее</a>
-              <a href="/" class="connection__link">Контакты</a>
+        <div class="row" id="category-slider">
+          <div class="category-cloumn">
+            <div class="category-col">
+              <h1 class="category-title">Уборка квартиры, Частных домов, Коттеджей, Офисов </h1>
+              <p class="category-text">Мы занимаемся организацией квартирных, офисных переездов, переездов магазинов,
+                салонов, перевозкой грузов и тд.</p>
+              <div class="connection">
+                <a href="./ru/services.html" class="connection__link">Подробнее</a>
+                <a href="./ru/contacts.html" class="connection__link">Контакты</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row " id="category-slider">
-          <span></span>
-          <span></span>
-          <span></span>
+          <div class="category-cloumn">
+            <div class="category-col">
+              <h1 class="category-title">Уборка квартиры, Частных домов, Коттеджей, Офисов </h1>
+              <p class="category-text">Мы занимаемся организацией квартирных, офисных переездов, переездов магазинов,
+                салонов, перевозкой грузов и тд.</p>
+              <div class="connection">
+                <a href="./ru/services.html" class="connection__link">Подробнее</a>
+                <a href="./ru/contacts.html" class="connection__link">Контакты</a>
+              </div>
+            </div>
+          </div>
+          <div class="category-cloumn">
+            <div class="category-col">
+              <h1 class="category-title">Уборка квартиры, Частных домов, Коттеджей, Офисов </h1>
+              <p class="category-text">Мы занимаемся организацией квартирных, офисных переездов, переездов магазинов,
+                салонов, перевозкой грузов и тд.</p>
+              <div class="connection">
+                <a href="./ru/services.html" class="connection__link">Подробнее</a>
+                <a href="./ru/contacts.html" class="connection__link">Контакты</a>
+              </div>
+            </div>
+          </div>
         </div>
         <ul class="thumbnails row category-list" id="customize-thumbnails" aria-label="Carousel Pagination">
           <li class="category-list__item" data-nav="1" aria-label="Carousel Page 1" aria-controls="customize" class=""
@@ -297,12 +328,12 @@
             <h2 class="title"><span class="mark-1">О нас</span> Clean Life
               <span class="mark-2"></span>
             </h2>
-            <p class="sec-about__text">Our mission is not only to meet your expectations but to exceed them, we also
-              provide many more like condos and apartment cleaning. Our unique 22-Step Healthy Touch Deep Cleaning
-              System will ensure you’ll receive a healthy, thorough housecleaning with every visit. We use cleaning
-              products that are friendly to the environment.</p>
+            <p class="sec-about__text">Наша миссия - не только оправдать ваши ожидания, но и превзойти их, мы также
+              предлагаем множество других услуг, например, кондоминиум и уборку квартир. Наша уникальная 22-шаговая
+              система глубокой очистки Healthy Touch гарантирует, что вы будете получать здоровую и тщательную уборку
+              при каждом посещении. Мы используем чистящие средства, безвредные для окружающей среды.</p>
             <h4 class="sec-about__detailed">
-              <span>10</span> Years <br> Experience
+              <span>10</span> Годы <br> Опыт
             </h4>
             <a href="/" class="sec-about__link">Подробнее</a>
           </div>
@@ -313,7 +344,7 @@
     <!-- sec-service -->
     <section class="sec-service">
       <div class="container">
-        <div class="row justify-between">
+        <div class="row">
           <div class="col-12">
             <h1 class="title"><span class="mark-1">Услуги</span>У Нас Широкий Спектр Клининговых Услуг
             </h1>
@@ -321,49 +352,81 @@
               бизнес-центров, а также зданий административного и производственного назначения. Уборочные мероприятия
               включают полный спектр клининговых услуг, необходимых для получения идеального результата.</p>
           </div>
-          <div class="col-lg-4 card">
-            <img class="card__img" src="./images/card_img_01.jpg" alt="service-img">
-            <div class="card__body">
-              <h4 class="card__title">Уборка</h4>
-              <p class="card__text">Представьте, что вы возвращаетесь домой в совершенно чистый, пахнущий свежестью дом
-                после долгого…</p>
-              <button class="card__btn">Читать Далее <span>
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.5 3.95825V15.0416" stroke="#00187b" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M3.95837 9.5H15.0417" stroke="#00187b" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </button>
+        </div>
+        <div class="row justify-between">
+          <div class="card-cloumn" style="z-index: 55;">
+            <div class="card">
+              <img class="card__img" src="./images/card_img_01.jpg" alt="service-img">
+              <div class="card__body">
+                <h4 class="card__title">Уборка</h4>
+                <p class="card__text">Представьте, что вы возвращаетесь домой в совершенно чистый, пахнущий свежестью
+                  дом
+                  после долгого…</p>
+                <ul class="card__list">
+                  <li>Генеральная уборка</li>
+                  <li>Уборка после ремонта</li>
+                  <li>Эко генеральная уборка</li>
+                  <li>Эко уборка после ремонта</li>
+                  <li>Уборка до и после мероприятии</li>
+                </ul>
+                <div class="card__link">
+                  <a href="#">Читать Далее
+                  </a>
+                  <span>
+                    <i class="ic ic_plus"></i>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-4 card">
-            <img class="card__img" src="./images/card_img_02.jpg" alt="service-img">
-            <div class="card__body">
-              <h4 class="card__title">Чистка Брусчатки И Фасадов</h4>
-              <p class="card__text">Представьте, что вы возвращаетесь домой в совершенно чистый, пахнущий свежестью дом
-                после долгого…</p>
-              <button class="card__btn">Читать Далее <span>
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.5 3.95825V15.0416" stroke="#00187b" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M3.95837 9.5H15.0417" stroke="#00187b" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </button>
+          <div class="card-cloumn" style="z-index: 54;">
+            <div class="card">
+              <img class="card__img" src="./images/card_img_02.jpg" alt="service-img">
+              <div class="card__body">
+                <h4 class="card__title">Чистка Брусчатки И Фасадов</h4>
+                <p class="card__text">Представьте, что вы возвращаетесь домой в совершенно чистый, пахнущий свежестью
+                  дом
+                  после долгого…</p>
+                <ul class="card__list">
+                  <li>Генеральная уборка</li>
+                  <li>Уборка после ремонта</li>
+                  <li>Эко генеральная уборка</li>
+                  <li>Эко уборка после ремонта</li>
+                  <li>Уборка до и после мероприятии</li>
+                </ul>
+                <div class="card__link">
+                  <a href="#">Читать Далее
+                  </a>
+                  <span>
+                    <i class="ic ic_plus"></i>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-4 card">
-            <img class="card__img" src="./images/card_img_03.jpg" alt="service-img">
-            <div class="card__body">
-              <h4 class="card__title">Химчистка</h4>
-              <p class="card__text">Представьте, что вы возвращаетесь домой в совершенно чистый, пахнущий свежестью дом
-                после долгого…</p>
-              <button class="card__btn">Читать Далее <span>
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.5 3.95825V15.0416" stroke="#00187b" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M3.95837 9.5H15.0417" stroke="#00187b" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </button>
+          <div class="card-cloumn" style="z-index: 53;">
+            <div class="card">
+              <img class="card__img" src="./images/card_img_03.jpg" alt="service-img">
+              <div class="card__body">
+                <h4 class="card__title">Химчистка</h4>
+                <p class="card__text">Представьте, что вы возвращаетесь домой в совершенно чистый, пахнущий свежестью
+                  дом
+                  после долгого…</p>
+                <ul class="card__list">
+                  <li>Генеральная уборка</li>
+                  <li>Уборка после ремонта</li>
+                  <li>Эко генеральная уборка</li>
+                  <li>Эко уборка после ремонта</li>
+                  <li>Уборка до и после мероприятии</li>
+                </ul>
+                <div class="card__link">
+                  <a href="#">Читать Далее
+                  </a>
+                  <span>
+                    <i class="ic ic_plus"></i>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -403,27 +466,26 @@
         </div>
         <div id="sec-project__images">
           <div class="row sec-project__image">
-            <div class="sec-project__img">
+            <div class="sec-project__img" data-src="./images/flat_img_01.jpg">
               <img src="./images/flat_img_01.jpg" alt="flat-img">
               <span class="flat_view">До</span>
             </div>
-            <div class="sec-project__img">
+            <div class="sec-project__img" data-src="./images/flat_img_02.jpg">
               <img src="./images/flat_img_02.jpg" alt="flat-img">
               <span class="flat_view">После</span>
             </div>
           </div>
           <div class="row sec-project__image">
-            <div class="sec-project__img">
+            <div class="sec-project__img" data-src="./images/flat_img_01.jpg">
               <img src="./images/flat_img_01.jpg" alt="flat-img">
               <span class="flat_view">До</span>
             </div>
-            <div class="sec-project__img">
+            <div class="sec-project__img" data-src="./images/flat_img_02.jpg">
               <img src="./images/flat_img_02.jpg" alt="flat-img">
               <span class="flat_view">После</span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
     <!-- / sec-project -->
@@ -444,37 +506,73 @@
             <div class="img">
               <img src="./images/machine_img_01.png" alt="Мойка высокого давления">
             </div>
-            <span>Мойка высокого давления</span>
+            <div class="sec-equipment-trans">
+              <div class='transform'>
+                <div class='transform-cont'>
+                </div>
+                <span>Мойка высокого давления</span>
+              </div>
+            </div>
           </div>
           <div class="sec-equipment-img">
             <div class="img">
               <img src="./images/machine_img_02.png" alt="Роторная машина">
             </div>
-            <span>Роторная машина </span>
+            <div class="sec-equipment-trans">
+              <div class='transform'>
+                <div class='transform-cont'>
+                </div>
+                <span>Роторная машина </span>
+              </div>
+            </div>
           </div>
           <div class="sec-equipment-img">
             <div class="img">
               <img src="./images/machine_img_03.png" alt="Плысос для стирки ковров">
             </div>
-            <span>Плысос для стирки ковров</span>
+            <div class="sec-equipment-trans">
+              <div class='transform'>
+                <div class='transform-cont'>
+                </div>
+                <span>Плысос для стирки ковров</span>
+              </div>
+            </div>
           </div>
           <div class="sec-equipment-img">
             <div class="img">
               <img src="./images/machine_img_01.png" alt="Мойка высокого давления">
             </div>
-            <span>Мойка высокого давления</span>
+            <div class="sec-equipment-trans">
+              <div class='transform'>
+                <div class='transform-cont'>
+                </div>
+                <span>Мойка высокого давления</span>
+              </div>
+            </div>
           </div>
           <div class="sec-equipment-img">
             <div class="img">
               <img src="./images/machine_img_02.png" alt="Роторная машина">
             </div>
-            <span>Роторная машина </span>
+            <div class="sec-equipment-trans">
+              <div class='transform'>
+                <div class='transform-cont'>
+                </div>
+                <span>Роторная машина </span>
+              </div>
+            </div>
           </div>
           <div class="sec-equipment-img">
             <div class="img">
               <img src="./images/machine_img_03.png" alt="Плысос для стирки ковров">
             </div>
-            <span>Плысос для стирки ковров</span>
+            <div class="sec-equipment-trans">
+              <div class='transform'>
+                <div class='transform-cont'>
+                </div>
+                <span>Плысос для стирки ковров</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -535,16 +633,16 @@
                 </svg>
               </div>
               <p class="card__text">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Существует множество вариаций отрывков Lorem Ipsum, но большинство из них претерпели изменения в той или
+                иной форме из-за добавленного юмора или случайных слов, которые даже не выглядят немного
+                правдоподобными.
               </p>
               <div class="card__bottom">
                 <div class="client__img">
                   <img src="./images/avatar_img_01.png" alt="">
                 </div>
                 <div class="user">
-                  <p class="user__name">Anna Loran</p>
+                  <p class="user__name">Анна Лоран</p>
                   <p class="user__job">Teacher</p>
                 </div>
               </div>
@@ -563,16 +661,72 @@
                 </svg>
               </div>
               <p class="card__text">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Существует множество вариаций отрывков Lorem Ipsum, но большинство из них претерпели изменения в той или
+                иной форме из-за добавленного юмора или случайных слов, которые даже не выглядят немного
+                правдоподобными.
               </p>
               <div class="card__bottom">
                 <div class="client__img">
                   <img src="./images/avatar_img_01.png" alt="">
                 </div>
                 <div class="user">
-                  <p class="user__name">Anna Loran</p>
+                  <p class="user__name">Анна Лоран</p>
+                  <p class="user__job">Учитель</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-column">
+            <div class="card">
+              <div class="card__svg">
+                <svg width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.6429 19.967C15.3622 19.5982 14.0815 19.4111 12.8356 19.4111C10.9118 19.4111 9.30655 19.8508 8.06181 20.3891C9.26182 15.996 12.1446 8.4157 17.8871 7.56205C18.4189 7.48296 18.8548 7.09841 18.9999 6.58077L20.2549 2.09161C20.3608 1.71197 20.298 1.3056 20.0815 0.976143C19.8649 0.646684 19.5169 0.426862 19.1269 0.373407C18.7031 0.315588 18.2711 0.286133 17.8429 0.286133C10.95 0.286133 4.12362 7.48078 1.24306 17.7824C-0.447851 23.8261 -0.943671 32.9124 3.22143 38.6316C5.55217 41.8318 8.95255 43.5407 13.3282 43.7115C13.3462 43.712 13.3637 43.7126 13.3817 43.7126C18.7806 43.7126 23.568 40.0765 25.0244 34.8712C25.8944 31.7593 25.5011 28.4958 23.916 25.6796C22.3479 22.895 19.7651 20.8653 16.6429 19.967Z"
+                    fill="#DCDCDC" />
+                  <path
+                    d="M50.4389 25.6801C48.8707 22.895 46.288 20.8653 43.1658 19.967C41.885 19.5982 40.6043 19.4111 39.359 19.4111C37.4352 19.4111 35.8294 19.8508 34.5846 20.3891C35.7846 15.996 38.6674 8.4157 44.4105 7.56205C44.9423 7.48296 45.3776 7.09841 45.5232 6.58077L46.7783 2.09161C46.8841 1.71197 46.8214 1.3056 46.6049 0.976143C46.3889 0.646683 46.0409 0.426862 45.6503 0.373407C45.227 0.315588 44.795 0.286133 44.3663 0.286133C37.4734 0.286133 30.647 7.48078 27.7659 17.7824C26.0755 23.8261 25.5797 32.9124 29.7453 38.6327C32.0755 41.8323 35.4765 43.5418 39.8516 43.712C39.8696 43.7126 39.887 43.7131 39.9056 43.7131C45.304 43.7131 50.092 40.077 51.5483 34.8717C52.4172 31.7598 52.0234 28.4958 50.4389 25.6801Z"
+                    fill="#DCDCDC" />
+                </svg>
+              </div>
+              <p class="card__text">
+                Существует множество вариаций отрывков Lorem Ipsum, но большинство из них претерпели изменения в той или
+                иной форме из-за добавленного юмора или случайных слов, которые даже не выглядят немного
+                правдоподобными.
+              </p>
+              <div class="card__bottom">
+                <div class="client__img">
+                  <img src="./images/avatar_img_01.png" alt="">
+                </div>
+                <div class="user">
+                  <p class="user__name">Анна Лоран</p>
+                  <p class="user__job">Учитель</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-column">
+            <div class="card">
+              <div class="card__svg">
+                <svg width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.6429 19.967C15.3622 19.5982 14.0815 19.4111 12.8356 19.4111C10.9118 19.4111 9.30655 19.8508 8.06181 20.3891C9.26182 15.996 12.1446 8.4157 17.8871 7.56205C18.4189 7.48296 18.8548 7.09841 18.9999 6.58077L20.2549 2.09161C20.3608 1.71197 20.298 1.3056 20.0815 0.976143C19.8649 0.646684 19.5169 0.426862 19.1269 0.373407C18.7031 0.315588 18.2711 0.286133 17.8429 0.286133C10.95 0.286133 4.12362 7.48078 1.24306 17.7824C-0.447851 23.8261 -0.943671 32.9124 3.22143 38.6316C5.55217 41.8318 8.95255 43.5407 13.3282 43.7115C13.3462 43.712 13.3637 43.7126 13.3817 43.7126C18.7806 43.7126 23.568 40.0765 25.0244 34.8712C25.8944 31.7593 25.5011 28.4958 23.916 25.6796C22.3479 22.895 19.7651 20.8653 16.6429 19.967Z"
+                    fill="#DCDCDC" />
+                  <path
+                    d="M50.4389 25.6801C48.8707 22.895 46.288 20.8653 43.1658 19.967C41.885 19.5982 40.6043 19.4111 39.359 19.4111C37.4352 19.4111 35.8294 19.8508 34.5846 20.3891C35.7846 15.996 38.6674 8.4157 44.4105 7.56205C44.9423 7.48296 45.3776 7.09841 45.5232 6.58077L46.7783 2.09161C46.8841 1.71197 46.8214 1.3056 46.6049 0.976143C46.3889 0.646683 46.0409 0.426862 45.6503 0.373407C45.227 0.315588 44.795 0.286133 44.3663 0.286133C37.4734 0.286133 30.647 7.48078 27.7659 17.7824C26.0755 23.8261 25.5797 32.9124 29.7453 38.6327C32.0755 41.8323 35.4765 43.5418 39.8516 43.712C39.8696 43.7126 39.887 43.7131 39.9056 43.7131C45.304 43.7131 50.092 40.077 51.5483 34.8717C52.4172 31.7598 52.0234 28.4958 50.4389 25.6801Z"
+                    fill="#DCDCDC" />
+                </svg>
+              </div>
+              <p class="card__text">
+                Существует множество вариаций отрывков Lorem Ipsum, но большинство из них претерпели изменения в той или
+                иной форме из-за добавленного юмора или случайных слов, которые даже не выглядят немного
+                правдоподобными.
+              </p>
+              <div class="card__bottom">
+                <div class="client__img">
+                  <img src="./images/avatar_img_01.png" alt="">
+                </div>
+                <div class="user">
+                  <p class="user__name">Анна Лоран</p>
                   <p class="user__job">Teacher</p>
                 </div>
               </div>
@@ -591,17 +745,17 @@
                 </svg>
               </div>
               <p class="card__text">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Существует множество вариаций отрывков Lorem Ipsum, но большинство из них претерпели изменения в той или
+                иной форме из-за добавленного юмора или случайных слов, которые даже не выглядят немного
+                правдоподобными.
               </p>
               <div class="card__bottom">
                 <div class="client__img">
                   <img src="./images/avatar_img_01.png" alt="">
                 </div>
                 <div class="user">
-                  <p class="user__name">Anna Loran</p>
-                  <p class="user__job">Teacher</p>
+                  <p class="user__name">Анна Лоран</p>
+                  <p class="user__job">Учитель</p>
                 </div>
               </div>
             </div>
@@ -619,73 +773,17 @@
                 </svg>
               </div>
               <p class="card__text">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Существует множество вариаций отрывков Lorem Ipsum, но большинство из них претерпели изменения в той или
+                иной форме из-за добавленного юмора или случайных слов, которые даже не выглядят немного
+                правдоподобными.
               </p>
               <div class="card__bottom">
                 <div class="client__img">
                   <img src="./images/avatar_img_01.png" alt="">
                 </div>
                 <div class="user">
-                  <p class="user__name">Anna Loran</p>
-                  <p class="user__job">Teacher</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-column">
-            <div class="card">
-              <div class="card__svg">
-                <svg width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16.6429 19.967C15.3622 19.5982 14.0815 19.4111 12.8356 19.4111C10.9118 19.4111 9.30655 19.8508 8.06181 20.3891C9.26182 15.996 12.1446 8.4157 17.8871 7.56205C18.4189 7.48296 18.8548 7.09841 18.9999 6.58077L20.2549 2.09161C20.3608 1.71197 20.298 1.3056 20.0815 0.976143C19.8649 0.646684 19.5169 0.426862 19.1269 0.373407C18.7031 0.315588 18.2711 0.286133 17.8429 0.286133C10.95 0.286133 4.12362 7.48078 1.24306 17.7824C-0.447851 23.8261 -0.943671 32.9124 3.22143 38.6316C5.55217 41.8318 8.95255 43.5407 13.3282 43.7115C13.3462 43.712 13.3637 43.7126 13.3817 43.7126C18.7806 43.7126 23.568 40.0765 25.0244 34.8712C25.8944 31.7593 25.5011 28.4958 23.916 25.6796C22.3479 22.895 19.7651 20.8653 16.6429 19.967Z"
-                    fill="#DCDCDC" />
-                  <path
-                    d="M50.4389 25.6801C48.8707 22.895 46.288 20.8653 43.1658 19.967C41.885 19.5982 40.6043 19.4111 39.359 19.4111C37.4352 19.4111 35.8294 19.8508 34.5846 20.3891C35.7846 15.996 38.6674 8.4157 44.4105 7.56205C44.9423 7.48296 45.3776 7.09841 45.5232 6.58077L46.7783 2.09161C46.8841 1.71197 46.8214 1.3056 46.6049 0.976143C46.3889 0.646683 46.0409 0.426862 45.6503 0.373407C45.227 0.315588 44.795 0.286133 44.3663 0.286133C37.4734 0.286133 30.647 7.48078 27.7659 17.7824C26.0755 23.8261 25.5797 32.9124 29.7453 38.6327C32.0755 41.8323 35.4765 43.5418 39.8516 43.712C39.8696 43.7126 39.887 43.7131 39.9056 43.7131C45.304 43.7131 50.092 40.077 51.5483 34.8717C52.4172 31.7598 52.0234 28.4958 50.4389 25.6801Z"
-                    fill="#DCDCDC" />
-                </svg>
-              </div>
-              <p class="card__text">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable.
-              </p>
-              <div class="card__bottom">
-                <div class="client__img">
-                  <img src="./images/avatar_img_01.png" alt="">
-                </div>
-                <div class="user">
-                  <p class="user__name">Anna Loran</p>
-                  <p class="user__job">Teacher</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-column">
-            <div class="card">
-              <div class="card__svg">
-                <svg width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16.6429 19.967C15.3622 19.5982 14.0815 19.4111 12.8356 19.4111C10.9118 19.4111 9.30655 19.8508 8.06181 20.3891C9.26182 15.996 12.1446 8.4157 17.8871 7.56205C18.4189 7.48296 18.8548 7.09841 18.9999 6.58077L20.2549 2.09161C20.3608 1.71197 20.298 1.3056 20.0815 0.976143C19.8649 0.646684 19.5169 0.426862 19.1269 0.373407C18.7031 0.315588 18.2711 0.286133 17.8429 0.286133C10.95 0.286133 4.12362 7.48078 1.24306 17.7824C-0.447851 23.8261 -0.943671 32.9124 3.22143 38.6316C5.55217 41.8318 8.95255 43.5407 13.3282 43.7115C13.3462 43.712 13.3637 43.7126 13.3817 43.7126C18.7806 43.7126 23.568 40.0765 25.0244 34.8712C25.8944 31.7593 25.5011 28.4958 23.916 25.6796C22.3479 22.895 19.7651 20.8653 16.6429 19.967Z"
-                    fill="#DCDCDC" />
-                  <path
-                    d="M50.4389 25.6801C48.8707 22.895 46.288 20.8653 43.1658 19.967C41.885 19.5982 40.6043 19.4111 39.359 19.4111C37.4352 19.4111 35.8294 19.8508 34.5846 20.3891C35.7846 15.996 38.6674 8.4157 44.4105 7.56205C44.9423 7.48296 45.3776 7.09841 45.5232 6.58077L46.7783 2.09161C46.8841 1.71197 46.8214 1.3056 46.6049 0.976143C46.3889 0.646683 46.0409 0.426862 45.6503 0.373407C45.227 0.315588 44.795 0.286133 44.3663 0.286133C37.4734 0.286133 30.647 7.48078 27.7659 17.7824C26.0755 23.8261 25.5797 32.9124 29.7453 38.6327C32.0755 41.8323 35.4765 43.5418 39.8516 43.712C39.8696 43.7126 39.887 43.7131 39.9056 43.7131C45.304 43.7131 50.092 40.077 51.5483 34.8717C52.4172 31.7598 52.0234 28.4958 50.4389 25.6801Z"
-                    fill="#DCDCDC" />
-                </svg>
-              </div>
-              <p class="card__text">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable.
-              </p>
-              <div class="card__bottom">
-                <div class="client__img">
-                  <img src="./images/avatar_img_01.png" alt="">
-                </div>
-                <div class="user">
-                  <p class="user__name">Anna Loran</p>
-                  <p class="user__job">Teacher</p>
+                  <p class="user__name">Анна Лоран</p>
+                  <p class="user__job">Учитель</p>
                 </div>
               </div>
             </div>
@@ -707,14 +805,22 @@
           <form class="sec-order__contact">
             <input type="text" class="name" name="name" placeholder="Имя *">
             <input type="text" class="number" name="number" placeholder="Телефон *">
-            <select name="select" class="select">
-              <option value="services-add">Выберите услугу *</option>
-              <option value="cleaning">Уборка</option>
-              <option value="facade-cleaning">Чистка Брусчатки И
-                Фасадов</option>
-              <option value="dry-cleaning">Химчистка</option>
-            </select>
+            <div class="selected">
+              <select name="select">
+                <option value="services-add">Выберите услугу *</option>
+                <option value="cleaning">Уборка</option>
+                <option value="facade-cleaning">Чистка Брусчатки И
+                  Фасадов</option>
+                <option value="dry-cleaning">Химчистка</option>
+              </select>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.75 5.625L7.5 9.375L11.25 5.625" stroke="#B0B0B0" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
 
+              </span>
+            </div>
             <textarea name="textarea" class="textarea" placeholder="Текстовое сообщение"></textarea>
             <button type="submit" class="btn-submit">Отправить сообщение</button>
           </form>
@@ -727,6 +833,43 @@
     <!-- / sec-order -->
   </main>
   <!-- / main -->
+  <!-- first modal -->
+  <div class="modal" id="modal">
+    <div class="modal__cloumn" id="modal__cloumn">
+      <h2 class="modal__title">
+        Oставить заявку
+      </h2>
+      <form class="modal__contact">
+        <input type="text" class="name" name="name" placeholder="Имя *">
+        <input type="text" class="number" name="number" placeholder="Телефон *">
+        <div class="selected">
+          <select name="select">
+            <option value="services-add">Выберите услугу *</option>
+            <option value="cleaning">Уборка</option>
+            <option value="facade-cleaning">Чистка Брусчатки И
+              Фасадов</option>
+            <option value="dry-cleaning">Химчистка</option>
+          </select>
+          <span>
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.75 5.625L7.5 9.375L11.25 5.625" stroke="#B0B0B0" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+        <textarea name="textarea" class="textarea" placeholder="Текстовое сообщение"></textarea>
+        <button type="submit" class="btn-submit">Отправить сообщение</button>
+      </form>
+      <button type="button" class="btn-close" id="btn-close"><i class="ic ic_times"></i></button>
+    </div>
+  </div>
+  <!--/ first modal -->
+  <div class="modal-image" id="modal-basic">
+    <div class="modal-image-basic">
+      <img src="./images/flat_img_01.jpg" alt="modal-image" id="modal-image">
+      <span class="modal-close"><i class="ic ic_times"></i></span>
+    </div>
+  </div>
   <!-- footer -->
   <footer>
     <div class="footer-top">
@@ -736,11 +879,21 @@
             <img src="./images/icons/cleanlife.svg" alt="">
           </div>
           <div class="footer-top__icons">
-            <a href="#" class="footer-top__link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="#" class="footer-top__link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" class="footer-top__link"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="#" class="footer-top__link"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-            <a href="#" class="footer-top__link"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
+            <a href="#" class="footer-top__link">
+              <i class="ic ic_facebook"></i>
+            </a>
+            <a href="#" class="footer-top__link">
+              <i class="ic ic_instagram"></i>
+            </a>
+            <a href="#" class="footer-top__link">
+              <i class="ic ic_whatsapp"></i>
+            </a>
+            <a href="#" class="footer-top__link">
+              <i class="ic ic_youtube"></i>
+            </a>
+            <a href="#" class="footer-top__link">
+              <i class="ic ic_telegram"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -810,18 +963,25 @@
           <div class="footer-contact">
             <h3 class="footer-title">Контакты</h3>
             <p class="footer-contact__address">Город Ташкент, Чиланзарский район, 6 квартал, «Эльдорадо»</p>
-            <p class="footer-contact__number"><span><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+            <p class="footer-contact__number">
+              <a href="tel:+998993333333">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.6014 9.70339V11.4534C12.6021 11.6158 12.5688 11.7767 12.5037 11.9255C12.4386 12.0744 12.3432 12.208 12.2234 12.3178C12.1037 12.4276 11.9624 12.5113 11.8085 12.5633C11.6546 12.6153 11.4915 12.6347 11.3297 12.6201C9.53472 12.425 7.81048 11.8116 6.29557 10.8292C4.88613 9.93361 3.69118 8.73866 2.79557 7.32922C1.80972 5.80743 1.19621 4.0748 1.00473 2.27172C0.990158 2.11041 1.00933 1.94783 1.06103 1.79434C1.11272 1.64084 1.19582 1.49979 1.30501 1.38017C1.41421 1.26055 1.54712 1.16497 1.69528 1.09953C1.84344 1.03409 2.0036 1.00021 2.16557 1.00006H3.91557C4.19866 0.99727 4.47311 1.09752 4.68776 1.28212C4.90241 1.46672 5.04261 1.72307 5.08223 2.00339C5.1561 2.56343 5.29308 3.11331 5.49057 3.64256C5.56905 3.85135 5.58604 4.07826 5.53951 4.2964C5.49299 4.51455 5.38491 4.71479 5.22807 4.87339L4.48724 5.61422C5.31764 7.07462 6.52683 8.28382 7.98724 9.11422L8.72807 8.37339C8.88667 8.21655 9.08691 8.10847 9.30505 8.06194C9.5232 8.01542 9.75011 8.03241 9.9589 8.11089C10.4881 8.30838 11.038 8.44536 11.5981 8.51922C11.8814 8.5592 12.1402 8.70193 12.3252 8.92026C12.5102 9.1386 12.6085 9.41731 12.6014 9.70339Z"
                     stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                +998 (99) 333 33 33,</span> <span>
-                <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                +998 (99) 333 33 33,
+              </a>
+              <a href="te:+998993333333">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M12.6014 9.70339V11.4534C12.6021 11.6158 12.5688 11.7767 12.5037 11.9255C12.4386 12.0744 12.3432 12.208 12.2234 12.3178C12.1037 12.4276 11.9624 12.5113 11.8085 12.5633C11.6546 12.6153 11.4915 12.6347 11.3297 12.6201C9.53472 12.425 7.81048 11.8116 6.29557 10.8292C4.88613 9.93361 3.69118 8.73866 2.79557 7.32922C1.80972 5.80743 1.19621 4.0748 1.00473 2.27172C0.990158 2.11041 1.00933 1.94783 1.06103 1.79434C1.11272 1.64084 1.19582 1.49979 1.30501 1.38017C1.41421 1.26055 1.54712 1.16497 1.69528 1.09953C1.84344 1.03409 2.0036 1.00021 2.16557 1.00006H3.91557C4.19866 0.99727 4.47311 1.09752 4.68776 1.28212C4.90241 1.46672 5.04261 1.72307 5.08223 2.00339C5.1561 2.56343 5.29308 3.11331 5.49057 3.64256C5.56905 3.85135 5.58604 4.07826 5.53951 4.2964C5.49299 4.51455 5.38491 4.71479 5.22807 4.87339L4.48724 5.61422C5.31764 7.07462 6.52683 8.28382 7.98724 9.11422L8.72807 8.37339C8.88667 8.21655 9.08691 8.10847 9.30505 8.06194C9.5232 8.01542 9.75011 8.03241 9.9589 8.11089C10.4881 8.30838 11.038 8.44536 11.5981 8.51922C11.8814 8.5592 12.1402 8.70193 12.3252 8.92026C12.5102 9.1386 12.6085 9.41731 12.6014 9.70339Z"
                       stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg></span> +998 (33) 999 99 99</span>
+                  </svg>
+                </span>
+                +998 (33) 999 99 99
+              </a>
             </p>
             <span class="footer-contact__message"><svg width="15" height="11" viewBox="0 0 15 11" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -854,7 +1014,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Copyright Разработчик @parmonov98 | 2021</p>
+      <div class="container">
+        <p>Copyright @ CleanLife.uz | 2021</p>
+        <a href="https://parmonov98.uz" target="_blank">Разработчик: <span>@parmonov98</span></a>
+      </div>
     </div>
   </footer>
   <!-- / footer -->

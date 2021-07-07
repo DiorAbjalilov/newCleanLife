@@ -102,8 +102,6 @@ if (document.querySelector("#sec-project__images")) {
 if (document.querySelector("#sec-equipment-slider")) {
   let secEquipmentSlider = tns({
     container: "#sec-equipment-slider",
-    items: 3,
-    gutter: 160,
     swipeAngle: false,
     speed: 400,
     navPosition: "bottom",
@@ -112,6 +110,19 @@ if (document.querySelector("#sec-equipment-slider")) {
     mouseDrag: true,
     rewind: true,
     nav: true,
+    responsive: {
+      1200: {
+        items: 3,
+        gutter: 160,
+      },
+      992: {
+        gutter: 140,
+      },
+      768: {
+        items: 2,
+        gutter: 160,
+      },
+    },
   });
 }
 
@@ -119,8 +130,6 @@ if (document.querySelector("#sec-equipment-slider")) {
 if (document.querySelector("#sec-client-slider")) {
   let secClientSlider = tns({
     container: "#sec-client-slider",
-    items: 3,
-    gutter: 52,
     swipeAngle: false,
     speed: 400,
     navPosition: "bottom",
@@ -129,6 +138,22 @@ if (document.querySelector("#sec-client-slider")) {
     mouseDrag: true,
     rewind: true,
     nav: true,
+    responsive: {
+      1200: {
+        items: 3,
+      },
+      992: {
+        gutter: 52,
+      },
+      768: {
+        items: 2,
+        gutter: 40,
+      },
+      200: {
+        items: 1,
+        gutter: 40,
+      },
+    },
   });
 }
 
@@ -154,12 +179,15 @@ function navbarWidthResize() {
     navbar.style.display = "none";
     navbarFixed.style.display = "none";
     navbarMobil.style.display = "block";
+    if (document.body.offsetWidth < 922) {
+    }
   } else {
     navbar.style.display = "flex";
     navbarFixed.style.display = "none";
     navbarMobil.style.display = "none";
   }
 }
+
 // btnUp
 const btnUp = document.querySelector(".btn-up");
 btnUp.addEventListener("click", function () {
@@ -171,85 +199,270 @@ btnUp.addEventListener("click", function () {
 });
 
 window.addEventListener("scroll", srollBtnUp);
+window.addEventListener("resize", srollBtnUp);
+srollBtnUp();
 function srollBtnUp() {
   if (window.pageYOffset < 500) {
     btnUp.style.display = "none";
   } else {
-    btnUp.style.display = "block";
+    btnUp.style.display = "flex";
+  }
+
+  if (document.body.offsetWidth < 820) {
+    btnUp.classList.add("btn-up-change");
+  } else {
+    btnUp.classList.remove("btn-up-change");
+  }
+
+  if (window.pageYOffset > 7100) {
+    btnUp.style.bottom = "523px";
+  } else {
+    btnUp.style.bottom = "40px";
   }
 }
 
 // Read more card__btn
-if (document.querySelector(".card .card__btn")) {
-  const readMore = document.querySelectorAll(".card .card__btn");
+if (document.querySelector(".card .card__body")) {
+  const readMore = document.querySelectorAll(".card");
   const cardList = document.querySelectorAll(".card .card__list");
-  const card = document.querySelectorAll(".card");
+  const cardLink = document.querySelectorAll(".card .card__link a");
 
-  readMore.forEach((item, index) => {
-    item.addEventListener("click", function () {
-      if (index === 0) {
-        cardList.forEach((itemList, indexInit) => {
-          if (index === indexInit) {
-            itemList.classList.toggle("active");
-            item.classList.toggle("active");
+  function cardAouto(number, callBack) {
+    readMore.forEach((item, index) => {
+      if (callBack === "mouseover") {
+        item.addEventListener(callBack, function () {
+          if (index === number) {
+            cardList.forEach((itemList, indexInit) => {
+              if (index === indexInit) {
+                itemList.classList.add("active");
+                item.classList.add("active");
+                cardLink.forEach((link, indexLink) => {
+                  if (indexLink === indexInit) {
+                    link.textContent = "Подробнее";
+                  }
+                });
+              }
+            });
           }
         });
-      }
-      if (index === 1) {
-        cardList.forEach((itemList, indexInit) => {
-          if (index === indexInit) {
-            itemList.classList.toggle("active");
-            item.classList.toggle("active");
-          }
-        });
-      }
-      if (index === 2) {
-        cardList.forEach((itemList, indexInit) => {
-          if (index === indexInit) {
-            itemList.classList.toggle("active");
-            item.classList.toggle("active");
+      } else {
+        item.addEventListener(callBack, function () {
+          if (index === number) {
+            cardList.forEach((itemList, indexInit) => {
+              if (index === indexInit) {
+                itemList.classList.remove("active");
+                item.classList.remove("active");
+                cardLink.forEach((link, indexLink) => {
+                  if (indexLink === indexInit) {
+                    link.textContent = "Читать далее";
+                  }
+                });
+              }
+            });
           }
         });
       }
     });
+  }
+  readMore.forEach((item, index) => {
+    item.addEventListener("mouseover", () => cardAouto(index, "mouseover"));
+    item.addEventListener("mouseout", () => cardAouto(index, "mouseout"));
   });
 }
 
 // navbar-mobil btn-toggol
-const btnToggl = document.querySelector(".navbar-mobil .btn-toggol");
-const bars = document.querySelector(".navbar-mobil .btn-toggol i");
-const navbarMobilNavbar = document.querySelector(
-  ".navbar-mobil .navbar-mobil__navbar"
-);
-btnToggl.addEventListener("click", () => {
-  if (bars.classList.contains("fa-bars")) {
-    bars.classList.remove("fa-bars");
-    bars.classList.add("fa-times");
-    navbarMobilNavbar.classList.add("active");
-  } else {
-    bars.classList.remove("fa-times");
-    bars.classList.add("fa-bars");
-    navbarMobilNavbar.classList.remove("active");
-  }
-});
-
-// navbar-fixed Auto
-window.addEventListener("scroll", navbarFixedAuto);
-const firstBarndLogo = "./images/icons/cleanlife.svg";
-const secondBarndLogo = "./images/icons/brand_logo.svg";
-
-function navbarFixedAuto() {
+if (document.querySelector("header .category")) {
   const navbarFixedMobil = document.querySelector(".navbar-mobil");
-  const brandLogo = document.querySelector(".navbar .brand-logo img");
-  if (window.pageYOffset > 500) {
-    navbarFixedMobil.classList.add("navbar-mobil-active");
-    // bars.classList.add("fa-bars");
-    // bars.classList.remove("fa-times");
-    brandLogo.src = secondBarndLogo;
-    console.log(brandLogo);
-    navbarMobilNavbar.classList.remove("active");
-  } else {
-    brandLogo.src = firstBarndLogo;
-    navbarFixedMobil.classList.remove("navbar-mobil-active");
+  const btnToggl = document.querySelector(".navbar-mobil .btn-toggol");
+  const navbarMobilNavbar = document.querySelector(
+    ".navbar-mobil .navbar-mobil__navbar"
+  );
+  const brandLogo = document.querySelector(
+    ".navbar-mobil__menu .brand-logo img"
+  );
+  const bars = document.querySelector(".navbar-mobil .btn-toggol i");
+  const firstBarndLogo = "./images/icons/brand_logo.svg";
+  const secondBarndLogo = "./images/icons/cleanlife.svg";
+
+  btnToggl.addEventListener("click", () => {
+    if (bars.classList.contains("ic_bars")) {
+      bars.classList.remove("ic_bars");
+      bars.classList.add("ic_times");
+      bars.classList.add("color-active");
+      navbarMobilNavbar.classList.add("active");
+      navbarFixedMobil.classList.add("navbar-mobil-bg");
+      brandLogo.src = firstBarndLogo;
+    } else {
+      bars.classList.remove("ic_times");
+      bars.classList.remove("color-active");
+      bars.classList.add("ic_bars");
+      navbarMobilNavbar.classList.remove("active");
+      navbarFixedMobil.classList.remove("navbar-mobil-bg");
+      brandLogo.src = secondBarndLogo;
+    }
+  });
+
+  // navbar-fixed Auto
+  window.addEventListener("scroll", navbarFixedAuto);
+  navbarFixedAuto();
+  function navbarFixedAuto() {
+    if (window.pageYOffset > 500) {
+      navbarFixedMobil.classList.add("navbar-mobil-active");
+    } else {
+      navbarFixedMobil.classList.remove("navbar-mobil-active");
+    }
   }
+}
+
+// modal window
+function modalWindows(name) {
+  this.order = document.getElementById(name);
+  const modalWindow = document.getElementById("modal");
+  const modalCloumn = document.getElementById("modal__cloumn");
+  const modalClose = document.getElementById("btn-close");
+
+  if (this.order) {
+    this.order.addEventListener("click", () => {
+      modalWindow.classList.add("modal-active");
+      modalCloumn.classList.add("modal__cloumn-active");
+    });
+    if (modalClose) {
+      modalClose.addEventListener("click", () => {
+        modalWindow.classList.remove("modal-active");
+      });
+    }
+  }
+
+  // window.onclick = function (e) {
+  //   if (
+  //     e.target.id !== "first-order" &&
+  //     e.target.id !== "modal__cloumn" &&
+  //     modalWindow.classList.contains("modal-active")
+  //   ) {
+  //     modalWindow.classList.remove("modal-active");
+  //     modalCloumn.classList.remove("modal__cloumn-active");
+  //   }
+  // };
+}
+
+const firstModal = new modalWindows("first-order");
+const secondModal = new modalWindows("second-order");
+const thirdModal = new modalWindows("third-order");
+
+// languageBasic
+if(document.getElementById('first-lang-basic')){
+  function languageControl(firstElement, secondElement, name) {
+  const languageBasic = document.getElementById(firstElement);
+  const langContent = document.getElementById(secondElement);
+
+    languageBasic.addEventListener("click", () => {
+      langContent.classList.toggle("lang__content-active");
+    });
+
+  window.addEventListener("click", function (e) {
+    if (
+      e.target.id !== `${name}-lang-basic` &&
+      e.target.id !== `${name}-lang__content`
+    ) {
+      langContent.classList.remove("lang__content-active");
+    }
+  });
+}
+languageControl("first-lang-basic", "first-lang__content", "first");
+languageControl("second-lang-basic", "second-lang__content", "second");
+languageControl("third-lang-basic", "third-lang__content", "third");
+}
+
+
+// navbar menu-change__link
+function navbarMenuChange() {
+  const menuChangeLink = document.querySelectorAll(".menu-change__link");
+  const navbarMenuInit = document.querySelectorAll(".menu-init");
+
+  menuChangeLink.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      navbarMenuInit.forEach((itemInit, indexInit) => {
+        if (indexInit === index) {
+          itemInit.classList.toggle("active");
+        }
+      });
+    });
+  });
+
+  window.addEventListener("click", function (e) {
+    let navbarlinkBoolean = false;
+    navbarMenuInit.forEach((item, index) => {
+      if (item.classList.contains("active")) {
+        navbarlinkBoolean = item.classList.contains("active");
+      }
+    });
+
+    if (
+      e.target.classList[0] !== "menu-init" &&
+      e.target.classList[0] !== "menu-change__link" &&
+      navbarlinkBoolean
+    ) {
+      navbarMenuInit.forEach((item, index) => {
+        item.classList.remove("active");
+      });
+    }
+  });
+}
+
+if (document.querySelector(".menu-change__link")) {
+  navbarMenuChange();
+}
+
+if (document.querySelector(".sec-facilities")) {
+  document.querySelector(".sec-facilities").parentNode.style.padding = "0";
+}
+if (document.querySelector(".sec-project")) {
+  document.querySelector(".sec-project").childNodes[1].style.padding = "0";
+}
+
+//modal-window images
+if (document.querySelector(".sec-project__img")) {
+  const modalDataset = document.querySelectorAll(".sec-project__img");
+  const modalWindow = document.getElementById("modal-image");
+  const modalBasicWindow = document.getElementById("modal-basic");
+  const modalClose = document.querySelector(".modal-close");
+
+  modalDataset.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      modalWindow.src = item.dataset.src;
+      modalBasicWindow.classList.add("active");
+    });
+  });
+
+  modalClose.addEventListener("click", () => {
+    modalBasicWindow.classList.remove("active");
+  });
+}
+
+// services_details tabs
+function tabsFunction() {
+  document.querySelector(".tabs").addEventListener("click", function (e) {
+    document.querySelectorAll(".tab-link").forEach((item, index) => {
+      item.classList.remove("active");
+    });
+
+    if (
+      e.target.classList.contains("tab-link") &&
+      !e.target.classList.contains("active")
+    ) {
+      e.target.classList.add("active");
+
+      const tabContentName = e.target.dataset.content;
+
+      document
+        .querySelector(`.tabs-content-item.active`)
+        .classList.remove("active");
+      const tabContent = document.getElementById(tabContentName);
+
+      tabContent.classList.add("active");
+    }
+  });
+}
+if (document.querySelector(".tabs")) {
+  tabsFunction();
 }

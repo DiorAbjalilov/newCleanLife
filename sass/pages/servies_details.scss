@@ -32,63 +32,38 @@ main .servies_details {
     line-height: 30px;
     color: $black;
   }
-  &__selects {
+  &__tabs {
     width: 100%;
+    padding: 0;
   }
-  &__select {
+  &__tab {
     width: 100%;
-    height: 60px;
+    padding: 11px 0 11px 25px;
     margin-top: 15px;
+    font-family: $gilroy-medium;
+    font-size: 16px;
+    line-height: 39px;
+    color: #696969;
     background: $white;
-    position: relative;
     border: 1px solid #d5d5d5;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
     @include transition();
-    select {
-      width: 100%;
-      height: 100%;
-      padding: 11px 25px;
-      background: transparent;
-      border: none;
-      font-family: $gilroy-medium;
-      font-size: 16px;
-      line-height: 39px;
-      color: #696969;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      position: relative;
-      cursor: pointer;
-      @include transition();
-      &:focus {
-        outline: none;
-      }
-      &::placeholder {
-        font-family: $gilroy-medium;
-        font-size: 16px;
-        line-height: 39px;
-        color: #696969;
-      }
-    }
     span {
       width: 24px;
       height: 24px;
       display: inline-block;
-      margin-right: 5px;
+      margin-right: 4px;
       transform: rotate(0);
       @include transition();
     }
-    &:hover {
+    &:hover,
+    &.active {
       background: #00b027;
-      select {
-        color: $white;
-        option {
-          padding: 10px 0;
-          color: #696969;
-        }
-      }
+      color: $white;
       span {
         transform: rotate(90deg);
         svg {
@@ -219,6 +194,10 @@ main .servies_details {
   }
   &__cloumn {
     width: 848px;
+    display: none;
+    &.active {
+      display: block;
+    }
   }
   &__title {
     margin-top: 56px;
@@ -255,11 +234,17 @@ main .servies_details {
     }
     .work-info {
       margin-left: 24px;
-      svg {
-        path {
-          fill: #00b027;
+      span {
+        width: 47px;
+        height: 47px;
+        display: block;
+        svg {
+          path {
+            fill: #00b027;
+          }
         }
       }
+
       &__titles {
         font-family: $gilroy-bold;
         font-size: 18px;
@@ -273,6 +258,7 @@ main .servies_details {
   }
   &__checked {
     display: flex;
+    align-items: center;
     margin-top: 23px;
     img {
       width: 31px;
@@ -280,7 +266,6 @@ main .servies_details {
       margin-right: 15px;
     }
     p {
-      margin-top: 2px;
       font-family: $gilroy-medium;
       font-size: 15px;
       line-height: 31px;
@@ -297,44 +282,71 @@ footer {
 
 // responsev
 
-@media (min-width: 991px) {
-  .servies_details {
-    .servies_details__width {
-      width: 24%;
+@media screen and (max-width: 1200px) {
+  main .servies_details {
+    > .container {
+      > .row {
+        justify-content: space-around;
+      }
     }
-    .servies_details__cloumn {
-      width: 74%;
+    &__width {
+      max-width: 100%;
+    }
+    &__titles {
+      margin-top: 56px !important;
+    }
+
+    &__tabs {
+      max-width: 320px;
+      width: 100%;
+    }
+    &__questions {
+      max-width: 320px;
+      width: 100%;
     }
   }
 }
 
-@media (max-width: 991px) and (min-width: 768px) {
-  .servies_details__width {
-    .row {
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-between;
-      .servies_details__questions {
-        margin-right: -400px;
-        margin-top: 20px;
+@media screen and (max-width: 767px) {
+  main .servies_details {
+    &__experience {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__titles {
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &__text {
+      text-align: center;
+    }
+    .work-info {
+      margin-left: 0;
+      &__titles {
+        text-align: center;
+      }
+      span {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
       }
     }
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
-  .row.justify-between {
-    justify-content: center;
+
+@media screen and (max-width: 576px) {
+  main .servies_details__tab {
+    font-size: 14px;
+    padding: 5px 0 5px 25px;
   }
-}
-@media (min-width: 320px) and (max-width: 575px) {
-  .servies_details__cloumn {
-    padding: 20px;
+  main .servies_details__title {
+    font-size: 25px;
+    line-height: 30px;
   }
-}
-@media (min-width: 320px) and (max-width: 450px) {
-  .servies_details__cloumn {
-    .work-img {
-      display: none;
-    }
+  main .servies_details__text {
+    line-height: 25px;
   }
 }
